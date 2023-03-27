@@ -29,7 +29,7 @@ object SecondDegreePolynomial:
   val fullPolynomial = SecondDegreePolynomial(3.0, 2.0, 5.0)
   val eqPolynomial = SecondDegreePolynomial(1.0, 1.0, 1.0)
   val eqPolynomial2 = SecondDegreePolynomial(1.0, 1.0, 1.0)
-  println("Check equity: " + (eqPolynomial == eqPolynomial2)) //
+  println("Check equity: " + (eqPolynomial == eqPolynomial2)) //true if case class, false otherwise
   val sum = simplePolynomial + anotherPolynomial
   println((sum, sum.secondDegree, sum.firstDegree, sum.constant)) // 1.0 * X^2 + 1.0 * X + 3.0
   val multipleOperations = fullPolynomial - (anotherPolynomial + simplePolynomial)
