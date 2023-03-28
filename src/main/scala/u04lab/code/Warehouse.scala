@@ -11,7 +11,10 @@ trait Item {
 }
 
 object Item:
-  def apply(code: Int, name: String, tags: List[String] = List.empty): Item = ItemImpl(code, name, tags)
+  import Stream.*
+  def apply(code: Int, name: String, tags: List[String]): Item = ItemImpl(code, name, tags)
+
+  //def apply(code: Int, name: String, tags: String*): Item = ItemImpl(code, name, tags.collect{ case mystr: String => mystr })
 
   private case class ItemImpl(override val code: Int, override val name: String, override val tags: List[String]) extends Item
 
