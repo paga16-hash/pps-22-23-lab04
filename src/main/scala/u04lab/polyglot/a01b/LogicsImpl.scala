@@ -15,10 +15,11 @@ class LogicsImpl(private val size: Int, private val mines: Int) extends Logics :
 
   import u04lab.code.List.*
 
-  val minesSet: u04lab.code.List[(Int, Int)] = Nil()
+  var minesSet: u04lab.code.List[(Int, Int)] = Nil()
   val selected: u04lab.code.List[(Int, Int)] = Nil()
   private val _rnd = Random(42)
-  while (length(minesSet) != mines) append(minesSet, Cons((_rnd.nextInt(size), _rnd.nextInt(size)), Nil()))
+  while (length(minesSet) != mines) minesSet = append(minesSet, Cons((_rnd.nextInt(size), _rnd.nextInt(size)), Nil()))
+
 
   private def neighbours(x: Int, y: Int) =
     import u04lab.code.Stream.*

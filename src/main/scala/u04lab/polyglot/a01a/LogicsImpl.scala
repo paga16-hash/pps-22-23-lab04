@@ -14,7 +14,7 @@ class LogicsImpl(private val size: Int, private val boat: Int) extends Logics :
   val boatRow: Int = _rnd.nextInt(size)
   val boatLeftCol: Int = _rnd.nextInt(size - boat + 1)
   var failures: Int = 0
-  val hit: u04lab.code.List[(Int, Int)] = Nil() // TODO TO CHECK!!!
+  val hit: u04lab.code.List[(Int, Int)] = Nil()
 
   def hit(row: Int, col: Int): Result = (row, col) match
     case (r, c) if r == boatRow && c >= boatLeftCol && c < boatLeftCol + boat => hitted(r, c)
