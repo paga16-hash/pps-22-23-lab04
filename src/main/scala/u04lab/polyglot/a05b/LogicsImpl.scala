@@ -3,7 +3,9 @@ package u04lab.polyglot.a05b
 import scala.util.Random
 
 /** solution and descriptions at https://bitbucket.org/mviroli/oop2019-esami/src/master/a05b/sol2/ */
-class LogicsImpl(private val size: Int) extends Logics :
+class LogicsImpl(
+                  private val size: Int
+                ) extends Logics :
   private val _rnd = Random()
   private val init: (Int, Int) = (_rnd.nextInt(size - 2) + 1, _rnd.nextInt(size - 2) + 1)
   private var tickCount: Int = 0
